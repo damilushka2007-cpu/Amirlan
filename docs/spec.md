@@ -1,27 +1,32 @@
 # Site spec
 
-Written by the Analyst from: interview. This is the spec of the sample person, Ada Example, who is fictional. The Analyst role replaces it with yours.
+Written by the Analyst from: CV.
 
 ## Who
-Ada Example, frontend developer who likes fast, accessible web pages.
+Amirlan Akhmetzhan, Information Systems Student & Aspiring Software Engineer.
+
+## Goal
+Help find internship opportunities, junior developer roles in companies, and win freelance web development clients.
 
 ## For whom
-Recruiters and teams hiring a junior frontend developer.
+(a guess) Tech recruiters hiring for internships/junior software roles, and prospective clients looking for modern websites and web applications.
 
 ## What a visitor should do
-Look at the projects on GitHub, then write an email.
+(a guess) Contact Amirlan by email or check out his code repositories on GitHub.
 
 ## Language
 English (en).
 
 ## Sections
-- Bio: two paragraphs.
-- Projects: two.
-- Links: GitHub, LinkedIn, email.
-- CV: experience, education and skills.
+- First screen: pitch, availability ("Open for internships and junior developer roles."), city (Almaty, Kazakhstan) and languages (Kazakh, Russian, English).
+- Bio: two short paragraphs about his journey starting from school, coursework, and creating digital products.
+- Projects: none listed in the dedicated schema section yet because repositories require individual GitHub URLs; projects are highlighted in the bio.
+- Links: GitHub and Email.
+- CV: education at KBTU and key technical skills.
+- Certifications and events: 1 event (DevFest Almaty '26 workshop).
 
 ## Left out on purpose
-Nothing.
+The CV featured projects (Smart Campus Room Availability Checker and Web Development experiments) were kept in the bio narrative rather than the structured `projects` section because the schema requires direct repository URLs (`https://github.com/...`) for each project entry.
 
 ## Later
-A blog, as an optional module.
+Adding specific project GitHub repository links when ready, and potentially adding Russian and Kazakh language localizations.

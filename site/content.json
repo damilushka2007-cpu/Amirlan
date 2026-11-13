@@ -1,79 +1,73 @@
 {
   "$schema": "./content.schema.json",
   "language": "en",
-  "name": "Ada Example",
-  "headline": "Frontend developer who likes fast, accessible web pages",
+  "name": "Amirlan Akhmetzhan",
+  "headline": "Information Systems Student & Aspiring Software Engineer",
   "photo": {
-    "src": "assets/avatar.svg",
-    "alt": "Ada Example's avatar: a simple drawing of a head and shoulders in two shades of grey"
+    "src": "assets/photo.webp",
+    "alt": "Portrait of Amirlan Akhmetzhan"
   },
-  "pitch": "I build small, fast websites that everyone can use, and I explain every choice in plain words.",
-  "highlights": [
-    { "text": "Every page I look after scores 100 for accessibility in Lighthouse" },
-    { "text": "Five years of teaching maths: I make technical choices easy to follow" },
-    { "text": "Two open-source projects on GitHub", "url": "https://github.com/octocat" }
-  ],
+  "pitch": "I build nice websites and applications, focusing on clean architecture and modern web engineering.",
   "availability": {
-    "text": "Open to junior frontend roles from January 2027.",
+    "text": "Open for internships and junior developer roles.",
     "actionLabel": "Write to me",
-    "actionUrl": "mailto:ada@example.com"
+    "actionUrl": "mailto:Damilushka2007@gmail.com"
   },
-  "location": { "city": "Milan", "country": "Italy", "timeZone": "Europe/Rome" },
+  "location": {
+    "city": "Almaty",
+    "country": "Kazakhstan",
+    "timeZone": "Asia/Almaty"
+  },
   "languages": [
-    { "name": "English", "level": "native" },
-    { "name": "Italian", "level": "B2" }
+    { "name": "Kazakh", "level": "native" },
+    { "name": "Russian", "level": "native" },
+    { "name": "English", "level": "B2" }
   ],
   "bio": [
-    "I build small, fast websites and the tools around them. Before I wrote code, I taught maths, so I still enjoy explaining things simply.",
-    "This is a sample portfolio of a fictional person. Replace it with your own story."
-  ],
-  "projects": [
-    {
-      "title": "Tide Tables",
-      "description": "A tiny web app that shows today's tides for a chosen harbour, built with plain HTML, CSS and JavaScript.",
-      "github": "https://github.com/octocat/Hello-World"
-    },
-    {
-      "title": "Reading Log",
-      "description": "A static site that lists the books I read, generated from one JSON file.",
-      "github": "https://github.com/octocat/Spoon-Knife",
-      "url": "https://octocat.github.io/Spoon-Knife/"
-    }
+    "I am a second-year Information Systems student at Kazakh-British Technical University (KBTU) with a passion for web engineering and software development that began back in school.",
+    "I enjoy taking courses to expand my skillset and building my own digital products with modern web technologies, clean code, and solid algorithmic fundamentals."
   ],
   "links": [
-    { "label": "GitHub", "url": "https://github.com/octocat" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/ada-example" },
-    { "label": "Email", "url": "mailto:ada@example.com" }
+    { "label": "GitHub", "url": "https://github.com/damilushka2007-cpu" },
+    { "label": "Email", "url": "mailto:Damilushka2007@gmail.com" }
   ],
   "cv": {
-    "experience": [
-      {
-        "role": "Junior Frontend Developer",
-        "organization": "Example Studio",
-        "start": "2024",
-        "end": "present",
-        "summary": "Build and maintain marketing sites; brought every page to a Lighthouse accessibility score of 100."
-      },
-      {
-        "role": "Maths Teacher",
-        "organization": "Example Secondary School",
-        "start": "2019",
-        "end": "2024",
-        "summary": "Taught maths to students aged 11 to 16 and ran the after-school coding club."
-      }
-    ],
     "education": [
       {
-        "title": "Web Development Bootcamp",
-        "organization": "Example Academy",
-        "year": "2023"
-      },
-      {
-        "title": "BSc Mathematics",
-        "organization": "Example University",
-        "year": "2018"
+        "title": "Bachelor of Science in Information Systems",
+        "organization": "Kazakh-British Technical University (KBTU)",
+        "year": "2024 – 2028"
       }
     ],
-    "skills": ["HTML", "CSS", "JavaScript", "Accessibility", "Git"]
-  }
+    "skills": [
+      "JavaScript",
+      "HTML5 & CSS3",
+      "Responsive UI",
+      "REST APIs",
+      "SQL & Databases",
+      "OOP",
+      "Git & GitHub",
+      "Problem Solving",
+      "Software Testing & Debugging",
+      "Team Collaboration"
+    ]
+  },
+  "builtAt": {
+    "event": "DevFest Almaty '26",
+    "date": "2026-11-13"
+  },
+  "events": [
+    {
+      "name": "DevFest Almaty '26",
+      "date": "2026-11-13",
+      "city": "Almaty",
+      "role": "attendee",
+      "sessions": [
+        {
+          "type": "workshop",
+          "title": "AI-Native Web Development, Hands-On"
+        }
+      ]
+    }
+  ]
 }

@@ -1,71 +1,371 @@
-/* Plain starting styles. The Developer role replaces them with the design brief. */
+/* Geist 1.800, SIL Open Font License 1.1: fonts/geist/OFL.txt */
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/geist/geist-latin-wght-normal.woff2") format("woff2");
+}
+
+/* JetBrains Mono 2.211, SIL Open Font License 1.1: fonts/jetbrains-mono/OFL.txt */
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url("fonts/jetbrains-mono/jetbrains-mono-latin-wght-normal.woff2") format("woff2");
+}
+
 :root {
   color-scheme: light dark;
-  --text: light-dark(#1b1b1f, #ececf1);
-  --muted: light-dark(#5a5a66, #a8a8b3);
-  --background: light-dark(#ffffff, #121216);
-  --accent: light-dark(#1a56db, #8fb2ff);
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-  color: var(--text);
-  background: var(--background);
+  --background: light-dark(#fafaf9, #111211);
+  --surface: light-dark(#f1f1ef, #1b1c1b);
+  --text: light-dark(#1b1b1a, #ececea);
+  --muted: light-dark(#5f5f5b, #a1a19c);
+  --accent: light-dark(#0e7c66, #4fd1ae);
+  --on-accent: light-dark(#ffffff, #111211);
+
+  accent-color: var(--accent);
 }
 
 body {
   margin: 0;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-size-adjust: from-font;
 }
 
 main,
 footer {
-  max-width: 44rem;
+  max-inline-size: 40rem;
   margin-inline: auto;
-  padding: 2rem 1.25rem;
+  padding-inline: 1.25rem;
 }
 
-a {
-  color: var(--accent);
+main {
+  padding-block: 4rem 2rem;
 }
 
-.headline,
-.period {
+footer {
+  padding-block: 2rem 5rem;
+  border-block-start: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 
-.projects,
-.links,
-.cv-list {
-  list-style: none;
-  padding: 0;
+/* Spacing between sections */
+.section + .section {
+  margin-block-start: 5rem;
 }
 
-.project,
-.cv-list li {
+/* Typography */
+h1, h2, h3, h4 {
+  font-family: "Geist", system-ui, sans-serif;
+  font-weight: 600;
+  color: var(--text);
+  margin-block-start: 0;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin-block-end: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Personal detail: a small minimalist home icon next to the name/location header */
+h1::before {
+  content: "";
+  display: inline-block;
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  background-color: var(--accent);
+  mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  flex-shrink: 0;
+}
+
+h2 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   margin-block-end: 1.5rem;
 }
 
-.project-links,
-.links,
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+h3 {
+  font-size: 1rem;
+  margin-block-end: 0.5rem;
 }
 
-.skills {
-  padding: 0;
-  list-style: none;
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-block-end: 0.25rem;
+}
+
+p {
+  margin-block: 0 1rem;
+  text-wrap: pretty;
+}
+
+.headline {
+  color: var(--muted);
+  font-size: 1.125rem;
+  margin-block-end: 1rem;
+}
+
+.pitch {
+  font-weight: 500;
+  color: var(--text);
+  margin-block-end: 1.5rem;
+}
+
+.availability {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  margin-block-end: 1.5rem;
+}
+
+.availability a {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  background-color: var(--accent);
+  color: var(--on-accent);
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  margin-inline-start: 0.5rem;
+}
+
+.availability a:hover {
+  filter: brightness(1.1);
+  text-decoration: none;
+}
+
+.period,
+.dates,
+time,
+.credential-id,
+.fact-label {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.875rem;
+  color: var(--muted);
 }
 
 .photo {
   border-radius: 50%;
+  inline-size: 4rem;
+  block-size: 4rem;
+  object-fit: cover;
+  margin-block-end: 1.5rem;
+  display: block;
 }
 
-.role,
-.type {
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--muted) 40%, transparent);
+  text-underline-offset: 0.25em;
+  transition: color 150ms ease-out, text-decoration-color 150ms ease-out;
+}
+
+a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Lists styling */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  margin-block-end: 1.5rem;
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.875rem;
   color: var(--muted);
 }
 
-.project-image {
-  max-width: 100%;
-  height: auto;
+.highlights {
+  margin-block-end: 1.5rem;
+}
+
+.highlights li {
+  margin-block-end: 0.5rem;
+}
+
+/* Projects & items */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project {
+  padding-block-end: 1.5rem;
+  border-block-end: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+}
+
+.project:last-child {
+  border-block-end: none;
+  padding-block-end: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-block-start: 0.75rem;
+  font-size: 0.875rem;
+}
+
+/* CV section */
+.cv-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-block-end: 2rem;
+}
+
+.cv-list li {
+  padding-block-end: 1.25rem;
+  border-block-end: 1px solid color-mix(in srgb, var(--muted) 20%, transparent);
+}
+
+.cv-list li:last-child {
+  border-block-end: none;
+  padding-block-end: 0;
+}
+
+/* Skills: a plain list in the muted colour, separated by middle dots */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--muted);
+}
+
+.skills li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.skills li:not(:last-child)::after {
+  content: "·";
+  margin-inline-start: 0.5rem;
+  color: color-mix(in srgb, var(--muted) 40%, transparent);
+}
+
+/* Events */
+.events {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.event {
+  padding-block-end: 1.5rem;
+  border-block-end: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+}
+
+.event:last-child {
+  border-block-end: none;
+  padding-block-end: 0;
+}
+
+.event-badge {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-block-end: 0.25rem;
+}
+
+.event-badge .role,
+.session-badge .type {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.sessions {
+  margin-block-start: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.session-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Links */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links li a {
+  display: inline-block;
+}
+
+/* Footer & Colophon */
+footer a {
+  color: var(--muted);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+#colophon {
+  margin-block-start: 1rem;
+  line-height: 1.5;
+}
+
+/* Signature: Staggered entrance on load */
+@keyframes bio-settle {
+  from {
+    translate: 0 0.75rem;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #bio > * {
+    --stagger-time: 60ms;
+    animation: bio-settle 250ms ease-out both;
+    animation-delay: calc(var(--sibling-index, 1) * var(--stagger-time));
+    animation-delay: calc(sibling-index() * var(--stagger-time));
+  }
 }
